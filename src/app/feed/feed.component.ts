@@ -15,6 +15,8 @@ export class FeedComponent implements OnInit {
     { body: 'You can’t have great software without a great team, and most software teams behave like dysfunctional families.', author: 'Joe', avatar: 'jina.jpg', date: new Date(), retweets: [], favorites: ['Mary', 'Glen'] }
   ]
 
+  tweetText='';
+
   constructor() { }
 
   ngOnInit() {
@@ -35,6 +37,12 @@ export class FeedComponent implements OnInit {
     if (!this.isUserInCollection(tweet.retweets, 'Glen')){
        tweet.retweets.push('Glen');
     } 
+  }
+
+  OnNewTweet(){
+    console.log(this.tweetText);
+    this.tweets.unshift({ body: this.tweetText, author: 'Glen', avatar: 'glif.jpg', date: new Date(), retweets: [ 'Joe'], favorites: [] });
+    this.tweetText = '';
   }
 
 }
