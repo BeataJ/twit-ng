@@ -26,10 +26,10 @@
       <div class="actions">
         <a class="reply">Reply</a>
         <a class="like" (click)="OnFavorite(tweet)">
-          <i class="like icon" [ngClass]='{liked: isUserInCollection(tweet.favorites, this._userService.getCurrentUser())}'></i> {{tweet.favorites.length}} Favourites
+          <i class="like icon" [ngClass]='{liked: tweet.hasFavorited(_userService.getCurrentUser())}'></i> {{tweet.favorites.length}} Favourites
         </a>
         <a class="retweet" (click)="OnRetweet(tweet)">
-          <i class="retweet icon" [ngClass]='{retweeted: isUserInCollection(tweet.retweets, this._userService.getCurrentUser())}'></i> {{tweet.retweets.length}} Retweets
+          <i class="retweet icon" [ngClass]='{retweeted: tweet.hasRetweeted(_userService.getCurrentUser())}'></i> {{tweet.retweets.length}} Retweets
         </a>
       </div>
     </div>
