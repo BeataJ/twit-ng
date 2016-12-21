@@ -40,4 +40,9 @@ export class FeedService {
        tweet.favorites.push(this._userService.getCurrentUser());
      }
    }
+
+ getFriends() : Array<string> {
+   return ['Mary', 'Joe', 'jsa', 'vista'];
+ }
+
 }
