@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FeedComponent } from './feed/feed.component';
 import { FriendsComponent } from './friends/friends.component';
 import { MessagesComponent } from './messages/messages.component';
+import { FriendComponent } from './friend/friend.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MessagesComponent } from './messages/messages.component';
     MenuComponent,
     FeedComponent,
     FriendsComponent,
-    MessagesComponent
+    MessagesComponent,
+    FriendComponent
   ],
   imports: [
     BrowserModule,
